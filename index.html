@@ -1,85 +1,149 @@
 <!DOCTYPE html>
-<html lang="fr-FR" class="with-senscyber contrast-default fontsize-default" data-fr-js="true">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon espace avec chatbot Tidio</title>
-    
-    <!-- C'EST CETTE LIGNE QUI FAIT MARCHER TOUT LE DESIGN : -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css">
-    
-    <!-- Fichier CSS perso -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reinitialisation de base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f6f6;
+            color: #161616;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* En-tete style DSFR */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #000091;
+            padding: 1rem 2rem;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #000091;
+            text-decoration: none;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background-color: #000091;
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            color: #000091;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.875rem;
+            color: #666666;
+            margin-top: auto;
+        }
+    </style>
 </head>
 
-<body class="full-width layout-homepage has-alert-banner audience-undefined" id="page-default" data-contrast="normal">
+<body>
 
-    <dialog id="fr-consent-modal" class="fr-modal" role="dialog" aria-labelledby="fr-consent-modal-title" style="z-index: 9999" data-fr-js-modal="true">
-    </dialog>
-
-    <a href="#main" class="sr-only sr-only-focusable">Accéder au contenu</a>
-
-    <div class="svg--catalogue"></div>
-
-    <a id="top"></a>
-
-    <header role="banner" id="main-header-dsfr" class="fr-header main-header_sticky">
-        <div class="fr-header_body">
-            <div class="fr-container">
-                <div class="fr-header_body-row">
-                    <div class="fr-header_brand fr-enlarge-link"></div>
-                    <div class="fr-header_tools"></div>
-                </div>
-            </div>
-        </div>
-        <div class="fr-header_menu fr-modal" id="modal-menu" data-fr-js-modal="true" data-fr-js-header-modal="true" aria-labelledby="button-menu-burger">
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo-title">Plateforme d'assistance</a>
         </div>
     </header>
 
-    <dialog aria-labelledby="fr-modal-title-modal-login" role="dialog" id="fr-modal-login" class="fr-modal" data-fr-js-modal="true">
-    </dialog>
-
-    <section id="alert-banner" class="alert-banner fr-container-fluid" role="region" aria-label="Informations importantes">
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Bienvenue 👋</h1>
+            <p>Mon espace avec chatbot Tidio.</p>
+        </div>
     </section>
 
-    <main role="main" id="main" tabindex="-1">
-        <div class="max-width-1440">
-            <section id="assistance-section" class="background-homepage-assistance background-blue-france section_assistance fr-container--fluid">
-                <div class="fr-grid-row fr-pt-md-10w fr-mb-md-15w fr-pl-md-15w fr-pr-md-15w fr-pt-4w fr-pb-16w fr-pl-2w fr-pr-2w">
-                    <div class="fr-col-12 fr-col-lg-7 fr-pr-1g-4w">
-                        <h1 class="fr-h2 cy-lg-h-ultra-large fr-text-inverted--grey text-center text-lg-left">Bienvenue 👋</h1>
-                        <p class="fr-text-inverted--grey text-center text-lg-left">Mon espace avec chatbot Tidio.</p>
-                    </div>
-                    <div class="fr-col-12 fr-col-lg-5"></div>
-                </div>
-                <div id="acyma_badge" class="acyma_badge"></div>
-            </section>
-
-            <section id="informer-section" class="fr-container--fluid section_informer background-beige-gris-galet-975"></section>
-
-            <section id="mainstream-section" class="section_mainstream"></section>
-
-            <section id="go-further-section" class="fr-container--fluid background-blue-france background-homepage-go further"></section>
-
-            <section id="articles-section" class="section_articles fr-container--fluid background-beige-gris-galet-975 fr-pb-2w fr-pb-md-8w"></section>
-
-            <section id="about-section" class="section_about fr-mb-2w"></section>
-
-            <section id="members-section" class="section_members fr-pt-4w"></section>
+    <main role="main">
+        <div class="card-container">
+            <div class="card">
+                <h2>Assistance en ligne</h2>
+                <p>Besoin d'aide ? Pose tes questions directement au chatbot situé en bas à droite de l'écran.</p>
+            </div>
+            <div class="card">
+                <h2>Informations</h2>
+                <p>Retrouvez toutes les ressources et guides d'utilisation sur cet espace dédié.</p>
+            </div>
         </div>
     </main>
 
-    <div id="faq-sidebar-btn-div" style="display: none;"></div>
+    <footer>
+        <p>&copy; 2026 Tous droits réservés.</p>
+    </footer>
 
-    <div id="faq-sidebar"></div>
-
-    <footer class="fr-footer" role="contentinfo" id="footer-dsfr"></footer>
-
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true"></div>
-
-    <!-- Script de ton Chatbot Tidio -->
-    <script src="//code.tidio.co/TON_CODE_TIDIO.js" async></script>
+    <!-- Script Chatbot Tidio -->
+  <script src="//code.tidio.co/blppjoqotnp3v9j7jh6daqt80maslbiv.js" async></script>
 
 </body>
 
