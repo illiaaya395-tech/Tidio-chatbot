@@ -162,46 +162,39 @@
         </div>
     </header>
 
-    <!-- Section Accueil -->
-    <div id="accueil" class="hero">
-        <h1>Bienvenue 👋</h1>
-        <p style="margin-top: 0.5rem;">Mon espace avec chatbot Tidio.</p>
+    <!-- Section Accueil / Banner avec 2 images encadrant le texte -->
+    <div id="accueil" class="hero" style="display: flex; align-items: center; justify-content: space-between; padding: 3rem 2rem; background-color: #000091; color: white;">
+        
+        <!-- Image de GAUCHE (bannière) -->
+        <img src="photo1..jfif" alt="Image Gauche" style="width: 250px; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid white;">
+
+        <!-- Texte du milieu -->
+        <div style="text-align: center; margin: 0 1rem;">
+            <h1>Bienvenue 👋</h1>
+            <p style="margin-top: 0.5rem;">Mon espace avec chatbot Tidio.</p>
+        </div>
+
+        <!-- Image de DROITE (bannière) -->
+        <img src="Tr8..png" alt="Image Droite" style="width: 250px; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid white;">
+
     </div>
 
-    <!-- Section Informations / Assistance -->
-    <section id="informations">
+    <!-- Section Services avec grande image de bannière en haut -->
+    <section id="informations" style="padding: 3rem 2rem; max-width: 1000px; margin: 0 auto;">
         <h2>Nos Services</h2>
-        <div class="cards-container">
-            <div class="card">
+        
+        <!-- Grande image au-dessus des cartes -->
+        <img src="T11..png" alt="Bannière Nos Services" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin: 1.5rem 0;">
+
+        <div class="cards-container" style="display: flex; gap: 20px;">
+            <div class="card" style="flex: 1; background: #fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #e5e5e5;">
                 <h3>Assistance en ligne</h3>
                 <p style="margin-top: 0.5rem;">Besoin d'aide ? Pose tes questions directement au chatbot situé en bas à droite de l'écran.</p>
             </div>
-            <div class="card">
+            <div class="card" style="flex: 1; background: #fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #e5e5e5;">
                 <h3>Informations</h3>
                 <p style="margin-top: 0.5rem;">Retrouvez toutes les ressources et guides d'utilisation dans cet espace dédié.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact">
-        <h2>Contactez-nous ✉️</h2>
-        <div class="contact-box" style="margin-top: 1.5rem;">
-            <form>
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" placeholder="Votre nom">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="votre@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" placeholder="Votre message..."></textarea>
-                </div>
-                <button type="button">Envoyer</button>
-            </form>
         </div>
     </section>
 
